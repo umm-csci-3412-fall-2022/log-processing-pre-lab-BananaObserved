@@ -1,0 +1,5 @@
+Core separation between all three cases is first punctuation.
+
+Match any word immediately prepending a piece of punctuation. It always needs to match two groups.  The first one will be prepending a piece of punctuation, and then a whitespace.  The first two are "some word, and then a piece of punctuation".  Current abomination script:
+
+(?<=.+?)((?:(?<= )\w+(?=[.,] ))|(?:\w\.){2,})\s*(?:My favorite sandwich is)?\s*(.*?)\.?$
